@@ -10,7 +10,7 @@ const testData = {
 };
 
 test.describe('E-Commerce Application Tests', () => {
-  test('Validate Add to Cart', async ({ page }) => {
+  test.skip('Validate Add to Cart', {tag : ['@smoke', '@regression']}, async ({ page }) => {
     const loginPage = new LoginPage(page);
     const dashboardPage = new DashboardPage(page);
 
@@ -23,3 +23,6 @@ test.describe('E-Commerce Application Tests', () => {
     expect(await dashboardPage.getAddToCartSuccessMessage()).toContain('Product Added To Cart');
   });
 });
+
+
+

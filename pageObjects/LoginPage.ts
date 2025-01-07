@@ -11,7 +11,7 @@ export class LoginPage{
     homePageIdentifier : Locator
     errorMessage : Locator
 
-    constructor(page : Page){
+    constructor(page :Page){
         this.page = page
         this.username = page.getByPlaceholder('email@example.com')
         this.password = page.getByPlaceholder('enter your passsword')

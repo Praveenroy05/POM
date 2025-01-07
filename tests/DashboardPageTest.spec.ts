@@ -16,7 +16,7 @@ test.beforeEach(async ({page})=>{
     await loginPage.launchURL(url)
     await loginPage.validLogin(username, password)
 })
-test('Validate Product Added to Cart', async()=>{
+test('Validate Product Added to Cart', {tag : ['@smoke', '@regression']}, async()=>{
     await expect(loginPage.homePageIdentifier).toBeVisible()
     await dashboardPage.searchProductAndAddToCart(productName)
     await expect(dashboardPage.addToCartSuccessMessage).toContainText("Product Added To Cart")

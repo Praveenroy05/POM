@@ -2,13 +2,28 @@
   "name": "pwtspom",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "fullTestCase": "npx playwright test",
+    "dashboardTestCase": "npx playwright test tests/DashboardPageUsingJsonTest.spec.ts",
+    "regression": "npx playwright test --grep @regression",
+    "smoke": "npx playwright test --grep @smoke",
+    "api": "npx playwright test --grep @api",
+    "apiSmoke": "npx playwright test --grep-invert @regression",
+    "smokeAndRegression": "npx playwright test --grep (?=.*@smoke)(?=.*@regression)",
+    "smokeOrRegression": "npx playwright test --grep @regression | @smoke",
+    "test:open-report" : "npx playwright test && npx allure serve allure-results"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.49.1",
-    "@types/node": "^22.10.2"
+    "@types/node": "^22.10.2",
+    "allure-commandline": "^2.32.0",
+    "allure-playwright": "^3.0.7"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
   }
 }

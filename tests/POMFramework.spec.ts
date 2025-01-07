@@ -28,3 +28,8 @@
 // Test data - JSON/Excel/CSV
 // Utils - API methods, screenshot, scrolling, reading the data from json/excel
 // Report - Allure/HTML
+
+
+
+// tagging the test case
+// script -  npx playwright test
