@@ -11,7 +11,7 @@
     "apiSmoke": "npx playwright test --grep-invert @regression",
     "smokeAndRegression": "npx playwright test --grep (?=.*@smoke)(?=.*@regression)",
     "smokeOrRegression": "npx playwright test --grep @regression | @smoke",
-    "test:open-report" : "npx playwright test && npx allure serve allure-results"
+    "test:open-report": "npx playwright test && npx allure serve allure-results"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +24,7 @@
     "allure-playwright": "^3.0.7"
   },
   "dependencies": {
+    "pwtspom": "file:",
     "xlsx": "^0.18.5"
   }
 }
