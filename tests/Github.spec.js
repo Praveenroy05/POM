@@ -12,7 +12,7 @@
 
 
  git pull 
- git checkout -b "loginPage" - Creating a new branch
+ git checkout -b loginPage - Creating a new branch
  git add . - Add all files to the staging area
  git commit -m "Initial commit" - Commit the files with a message
  git push
@@ -20,6 +20,10 @@
 
  git checkout master - Switch to the master branch
  git pull      - Pull all the remote changes to your local system
+
+ git merge master - 
+ git checkout loginPage - Switch to the loginPage branch
+ git merge master - Merge the master branch into the loginPage branch
 
 
 
@@ -35,11 +39,6 @@ git clone https://github.com/username/repository.git - Clone the repository
 
 
 
-
-
-
-
-
-
-
 */
+
+import {test, expect, Page} from '@playwright/test'
